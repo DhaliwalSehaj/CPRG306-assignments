@@ -17,6 +17,7 @@ export default function Home() {
       
       <Link href="/week3/" style={{ fontSize: 30,display:'flex',alignItems:'center',justifyContent:'center' }}>Shopping List</Link>
       <Link href="/week4/" style={{ fontSize: 30,display:'flex',alignItems:'center',justifyContent:'center' }}>Week 4</Link>
+      <Link href="/week5/" style={{ fontSize: 30,display:'flex',alignItems:'center',justifyContent:'center' }}>Week 5</Link>
     </main>
   )
 }

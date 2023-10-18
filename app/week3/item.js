@@ -5,6 +5,8 @@ export default function Item({ name, quantity, category }) {
         <p>quantity: {quantity}</p>
         <p>category: {category}</p>
       </div>
+
+      
     );
   }
   
