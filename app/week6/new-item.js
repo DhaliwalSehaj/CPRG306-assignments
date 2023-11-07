@@ -1,10 +1,11 @@
 "use client";
-import React, { useState } from "react";
+import { useState } from "react";
 
-export default function NewItem({onAddItem}) {
+export default function NewItem() {
   const [name, setName] = useState("");
   const [quantity, setQuantity] = useState(1);
   const [category, setCategory] = useState("produce");
+  
   const [itemCreated, setItemCreated] = useState(false);
 
   const handleSubmit = (event) => {
@@ -20,7 +21,7 @@ export default function NewItem({onAddItem}) {
     setItemCreated(true);
 
     setName("");
-    setQuantity("1");
+    setQuantity("");
     setCategory("");
 setItemCreated(false);
   };
@@ -75,8 +76,6 @@ setItemCreated(false);
                 <option value="other">Other</option>
             </select>
             <button type="submit" class="w-full py-2 px-4 bg-sky-600 hover:bg-sky-500 rounded-md text-white" fdprocessedid="znirgw">+</button>
-
-    
           </form>
         </div>
         </div>
