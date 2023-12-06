@@ -1,31 +1,30 @@
 "use client";
 import { useUserAuth } from "./_utils/auth-context";
 
-
-
-
 export default function Page() {
-    const { user, githubSignIn, firebaseSignout } = useUserAuth();
+  // Using the useUserAuth custom hook to get authentication-related information
+  const { user, githubSignIn, firebaseSignout } = useUserAuth();
 
-    
-    const handleAuthentication = async () => {
-        if (user) {
-            await githubSignIn();
-            await firebaseSignout();
-        }
-    };
+  // Function to handle authentication (sign in with GitHub and sign out from Firebase)
+  const handleAuthentication = async () => {
+    if (user) {
+      await githubSignIn();
+      await firebaseSignout();
+    }
+  };
 
-    
-    handleAuthentication();
+  // Automatically trigger authentication handling when the component mounts
+  handleAuthentication();
 
-    return (
-        <main>
-            <header>
-                <p>
-                    Welcome, {user ? `${user.displayName} (${user.email})` : 'Guest'}
-                </p>
-                <h1>Protected Page</h1>
-            </header>
-        </main>
-    );
+  // Component rendering
+  return (
+    <main>
+      <header>
+        <p>
+          Welcome, {user ? `${user.displayName} (${user.email})` : 'Guest'}
+        </p>
+        <h1>Protected Page</h1>
+      </header>
+    </main>
+  );
 }
