@@ -2,10 +2,10 @@ import React, { useState } from 'react';
 import Item from './item';
 
 export default function ItemList({ items, onItemSelect }) {
-  // State to track the sorting option (default: "name")
+  
   const [sortBy, setSortBy] = useState("name");
 
-  // Create a sorted copy of the items based on the selected sorting option
+  
   const sortedItems = [...items].sort((a, b) => a[sortBy].localeCompare(b[sortBy]));
 
   return (
@@ -26,7 +26,7 @@ export default function ItemList({ items, onItemSelect }) {
         </button>
       </div>
 
-      {/* Render the sorted items using the Item component */}
+      
       <div>
         {sortedItems.map((item) => (
           <Item key={item.id} name={item.name} quantity={item.quantity} category={item.category} onSelect={onItemSelect} />

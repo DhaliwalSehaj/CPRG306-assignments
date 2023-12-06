@@ -1,6 +1,6 @@
 import React from 'react';
 
-// Functional component for rendering an item
+
 const Item = ({ name, quantity, category }) => {
   return (
     <li className="cursor-pointer border border-sky-500 bg-sky-600 m-3 p-2">
